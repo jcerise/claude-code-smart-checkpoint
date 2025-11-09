@@ -4,6 +4,28 @@ A comprehensive context management system for Claude Code that intelligently dec
 
 ## Quick Start
 
+### Option 1: Automated Installation (Recommended)
+
+Use the install script for quick setup:
+
+```bash
+# Install to current project only
+./install.sh project
+
+# Install to personal commands (available in all projects)
+./install.sh personal
+
+# Install to both
+./install.sh both
+```
+
+The script will:
+- Create necessary directories (.claude/commands/, .claude/checkpoints/)
+- Copy all command files
+- Optionally add .claude/checkpoints/ to .gitignore
+
+### Option 2: Manual Installation
+
 1. **Create checkpoint directory**:
 ```bash
 mkdir -p .claude/checkpoints
@@ -13,18 +35,18 @@ mkdir -p ~/.claude/commands  # for personal commands
 2. **Install commands**:
 ```bash
 # For project-specific (recommended)
-cp smart-save.md .claude/commands/
-cp checkpoint.md .claude/commands/
-cp restore.md .claude/commands/
-cp list-checkpoints.md .claude/commands/
-cp diff-checkpoint.md .claude/commands/
+cp commands/smart-save.md .claude/commands/
+cp commands/checkpoint.md .claude/commands/
+cp commands/restore.md .claude/commands/
+cp commands/list-checkpoints.md .claude/commands/
+cp commands/diff-checkpoint.md .claude/commands/
 
 # For personal (available in all projects)
-cp smart-save.md ~/.claude/commands/
-cp checkpoint.md ~/.claude/commands/
-cp restore.md ~/.claude/commands/
-cp list-checkpoints.md ~/.claude/commands/
-cp diff-checkpoint.md ~/.claude/commands/
+cp commands/smart-save.md ~/.claude/commands/
+cp commands/checkpoint.md ~/.claude/commands/
+cp commands/restore.md ~/.claude/commands/
+cp commands/list-checkpoints.md ~/.claude/commands/
+cp commands/diff-checkpoint.md ~/.claude/commands/
 ```
 
 3. **Optional: Add to .gitignore or commit**:
